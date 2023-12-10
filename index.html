@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function calculadora() {
+
+            const numero1 = parseFloat(prompt('Ingrese el primer numero:'));
+            const numero2 = parseFloat(prompt('Ingrese el segundo numero:'));
+
+            if (isNaN(numero1) || isNaN(numero2)) {
+                alert('Ingrese numeros validos.');
+                return;
+            }
+
+            const operacion = prompt('Seleccionar operacion');
+
+            let resultado;
+            switch (operacion.toLowerCase()) {
+                case 'suma':
+                    reultado = numero1 + numero2;
+                    break;
+                case 'resta':
+                    reultado = numero1 - numero2;
+                    break;
+                case 'multiplicacion':
+                    reultado = numero1 * numero2;
+                    break;
+                case 'division':
+                    reultado = numero1 / numero2;
+                    break;
+                default:
+                    alert('Operacion no valida');
+                    return;
+            }
+            alert(`El resultado de ${numero1} ${operacion} ${numero2} es: ${resultado}`);
+
+        }
+        calculadora();
+    </script>
+</body>
+
+</html>
